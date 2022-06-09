@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220605 10:24:45.927" rpa="false" schemaversion="3">
+<suite id="s1" name="Loop" source="D:\Advance_Robot_Python\Robot Framework_4_FOR LOOP\loop.robot">
+<test id="s1-t1" name="For-Loop-In-Range" line="5">
+<for flavor="IN RANGE">
+<var>${INDEX}</var>
+<value>1</value>
+<value>5</value>
+<iter>
+<var name="${INDEX}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${INDEX}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.955" endtime="20220605 10:24:45.955"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${RANDOM_STRING}</var>
+<arg>${INDEX}</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220605 10:24:45.955" level="INFO">${RANDOM_STRING} = S</msg>
+<status status="PASS" starttime="20220605 10:24:45.955" endtime="20220605 10:24:45.955"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${RANDOM_STRING}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.955" endtime="20220605 10:24:45.956"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.955" endtime="20220605 10:24:45.956"/>
+</iter>
+<iter>
+<var name="${INDEX}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${INDEX}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.956" endtime="20220605 10:24:45.956"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${RANDOM_STRING}</var>
+<arg>${INDEX}</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220605 10:24:45.956" level="INFO">${RANDOM_STRING} = VM</msg>
+<status status="PASS" starttime="20220605 10:24:45.956" endtime="20220605 10:24:45.956"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${RANDOM_STRING}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.957" endtime="20220605 10:24:45.957"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.956" endtime="20220605 10:24:45.957"/>
+</iter>
+<iter>
+<var name="${INDEX}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${INDEX}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.957" endtime="20220605 10:24:45.957"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${RANDOM_STRING}</var>
+<arg>${INDEX}</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220605 10:24:45.957" level="INFO">${RANDOM_STRING} = 81z</msg>
+<status status="PASS" starttime="20220605 10:24:45.957" endtime="20220605 10:24:45.957"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${RANDOM_STRING}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.958" endtime="20220605 10:24:45.958"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.957" endtime="20220605 10:24:45.958"/>
+</iter>
+<iter>
+<var name="${INDEX}">4</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${INDEX}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.958" endtime="20220605 10:24:45.959"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${RANDOM_STRING}</var>
+<arg>${INDEX}</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220605 10:24:45.959" level="INFO">${RANDOM_STRING} = 9IBk</msg>
+<status status="PASS" starttime="20220605 10:24:45.959" endtime="20220605 10:24:45.959"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${RANDOM_STRING}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.959" endtime="20220605 10:24:45.959"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.958" endtime="20220605 10:24:45.959"/>
+</iter>
+<status status="PASS" starttime="20220605 10:24:45.954" endtime="20220605 10:24:45.959"/>
+</for>
+<status status="PASS" starttime="20220605 10:24:45.954" endtime="20220605 10:24:45.960"/>
+</test>
+<test id="s1-t2" name="For-Loop-Elements" line="13">
+<kw name="Create List" library="BuiltIn">
+<var>@{ITEMS}</var>
+<arg>Star Trek</arg>
+<arg>Star Wars</arg>
+<arg>Pottor</arg>
+<arg>Rodon</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220605 10:24:45.961" level="INFO">@{ITEMS} = [ Star Trek | Star Wars | Pottor | Rodon ]</msg>
+<status status="PASS" starttime="20220605 10:24:45.961" endtime="20220605 10:24:45.961"/>
+</kw>
+<for flavor="IN">
+<var>${ELEMENT}</var>
+<value>@{ITEMS}</value>
+<iter>
+<var name="${ELEMENT}">Star Trek</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.962" endtime="20220605 10:24:45.962"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${ELEMENT}</var>
+<arg>${ELEMENT}</arg>
+<arg>${SPACE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220605 10:24:45.963" level="INFO">${ELEMENT} = StarTrek</msg>
+<status status="PASS" starttime="20220605 10:24:45.962" endtime="20220605 10:24:45.963"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.963" endtime="20220605 10:24:45.963"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.962" endtime="20220605 10:24:45.963"/>
+</iter>
+<iter>
+<var name="${ELEMENT}">Star Wars</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.963" endtime="20220605 10:24:45.964"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${ELEMENT}</var>
+<arg>${ELEMENT}</arg>
+<arg>${SPACE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220605 10:24:45.965" level="INFO">${ELEMENT} = StarWars</msg>
+<status status="PASS" starttime="20220605 10:24:45.964" endtime="20220605 10:24:45.965"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.965" endtime="20220605 10:24:45.965"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.963" endtime="20220605 10:24:45.965"/>
+</iter>
+<iter>
+<var name="${ELEMENT}">Pottor</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.965" endtime="20220605 10:24:45.966"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${ELEMENT}</var>
+<arg>${ELEMENT}</arg>
+<arg>${SPACE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220605 10:24:45.966" level="INFO">${ELEMENT} = Pottor</msg>
+<status status="PASS" starttime="20220605 10:24:45.966" endtime="20220605 10:24:45.966"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.966" endtime="20220605 10:24:45.967"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.965" endtime="20220605 10:24:45.967"/>
+</iter>
+<iter>
+<var name="${ELEMENT}">Rodon</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.967" endtime="20220605 10:24:45.967"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${ELEMENT}</var>
+<arg>${ELEMENT}</arg>
+<arg>${SPACE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220605 10:24:45.968" level="INFO">${ELEMENT} = Rodon</msg>
+<status status="PASS" starttime="20220605 10:24:45.967" endtime="20220605 10:24:45.968"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.968" endtime="20220605 10:24:45.968"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.967" endtime="20220605 10:24:45.969"/>
+</iter>
+<status status="PASS" starttime="20220605 10:24:45.962" endtime="20220605 10:24:45.969"/>
+</for>
+<status status="PASS" starttime="20220605 10:24:45.961" endtime="20220605 10:24:45.969"/>
+</test>
+<test id="s1-t3" name="For-Loop-Exiting" line="22">
+<kw name="Create List" library="BuiltIn">
+<var>@{ITEMS}</var>
+<arg>Good Element 1</arg>
+<arg>Good Element 2</arg>
+<arg>Break On Me</arg>
+<arg>Good Element 3</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220605 10:24:45.970" level="INFO">@{ITEMS} = [ Good Element 1 | Good Element 2 | Break On Me | Good Element 3 ]</msg>
+<status status="PASS" starttime="20220605 10:24:45.970" endtime="20220605 10:24:45.970"/>
+</kw>
+<for flavor="IN">
+<var>${ELEMENT}</var>
+<value>@{ITEMS}</value>
+<iter>
+<var name="${ELEMENT}">Good Element 1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.971" endtime="20220605 10:24:45.971"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${ELEMENT}' == 'Break On Me'</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220605 10:24:45.971" endtime="20220605 10:24:45.971"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Do more actions here ...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.971" endtime="20220605 10:24:45.972"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.971" endtime="20220605 10:24:45.972"/>
+</iter>
+<iter>
+<var name="${ELEMENT}">Good Element 2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.972" endtime="20220605 10:24:45.972"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${ELEMENT}' == 'Break On Me'</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220605 10:24:45.973" endtime="20220605 10:24:45.973"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Do more actions here ...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.973" endtime="20220605 10:24:45.973"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.972" endtime="20220605 10:24:45.973"/>
+</iter>
+<iter>
+<var name="${ELEMENT}">Break On Me</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${ELEMENT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220605 10:24:45.973" endtime="20220605 10:24:45.974"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${ELEMENT}' == 'Break On Me'</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<msg timestamp="20220605 10:24:45.974" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220605 10:24:45.974" endtime="20220605 10:24:45.974"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.974" endtime="20220605 10:24:45.975"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Do more actions here ...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220605 10:24:45.975" endtime="20220605 10:24:45.975"/>
+</kw>
+<status status="PASS" starttime="20220605 10:24:45.973" endtime="20220605 10:24:45.975"/>
+</iter>
+<status status="PASS" starttime="20220605 10:24:45.970" endtime="20220605 10:24:45.975"/>
+</for>
+<status status="PASS" starttime="20220605 10:24:45.970" endtime="20220605 10:24:45.975"/>
+</test>
+<status status="PASS" starttime="20220605 10:24:45.929" endtime="20220605 10:24:45.976"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Loop">Loop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
